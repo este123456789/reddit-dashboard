@@ -1,0 +1,12 @@
+composer require guzzlehttp/guzzle
+
+php artisan make:migration create_themes_table --create=themes
+
+
+php artisan make:model Theme
+
+php artisan migrate
+
+php artisan make:command ImportRedditThemes
+
+php artisan reddit:import-themes
